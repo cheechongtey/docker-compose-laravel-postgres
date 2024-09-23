@@ -22,6 +22,8 @@ init:
 	docker compose run --rm npm ci
 	docker compose run --rm artisan migrate
 	# @make fresh
+dev:
+	docker compose run --rm --service-ports npm run dev
 remake:
 	@make destroy
 	@make init
